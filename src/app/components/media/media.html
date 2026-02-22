@@ -1,0 +1,18 @@
+<div class="mt-4" *ngIf="videoUrl">
+  <h6 class="text-secondary fw-bold mb-3"><i class="bi bi-camera-video text-danger"></i>Jugadas</h6>
+  
+  <div class="card bg-dark border-0 shadow-sm overflow-hidden rounded-3">
+
+    <!-- Elemento video con etiqueta para poder referenciar desde media.ts, @ViewChild busca 'reproductor' -->
+    <video #reproductor [src]="videoUrl" class="w-100" style="max-height: 250px; background: #000; object-fit: contain;"></video>
+    
+    <div class="card-footer d-flex justify-content-center gap-3 bg-dark border-0 pb-3">
+      <button class="btn btn-outline-light rounded-circle" (click)="play()" title="Reproducir"> <!-- Llamad a los eventos creados de control del video, cuando el usuario hace click, llama a la función en media.ts -->
+        <i class="bi bi-play-fill fs-5"></i>
+      </button>
+      <button class="btn btn-outline-light rounded-circle" (click)="pause()" title="Pausar">
+        <i class="bi bi-pause-fill fs-5"></i>
+      </button>
+    </div>
+  </div>
+</div>
