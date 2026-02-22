@@ -1,0 +1,31 @@
+<div class="card mb-4 shadow border-primary" *ngIf="player">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="player.imagen" class="img-fluid rounded-start h-100 object-fit-cover" alt="Foto de {{ player.nombre }}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title text-primary fw-bold">{{ player.nombre }} {{ player.apellidos }}</h3>
+        <h5 class="text-secondary">{{ player.posicion }}</h5>
+        
+        <hr>
+        
+        <div class="row text-center mt-3">
+          <div class="col-6">
+            <h6 class="text-muted mb-0">Edad</h6>
+            <p class="fs-4 fw-bold">{{ player.edad }} años</p>
+          </div>
+          <div class="col-6">
+            <h6 class="text-muted mb-0">Altura</h6>
+            <p class="fs-4 fw-bold">{{ player.altura }} m</p>
+          </div>
+        </div>
+        
+        <div class="alert alert-warning mt-3">
+          <i class="bi bi-camera-video"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
