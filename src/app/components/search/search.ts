@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core'; // Añadimos eventEmiter y Output para poder usarlos (output envía datos y eventEmiter lleva esos datos)
 
 @Component({
   selector: 'app-search',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './search.css',
 })
 export class Search {
+
+  // Output le dice a angular que la variable 'busqueda' es para enviar y que la escuchará el componente padre, 
+  @Output() busqueda = new EventEmitter<string>();  // eventEmiter dice que enviamos una string (que será el texto buscado)
+
+  textoBusqueda(event: any) {  // se ejecuta cuando el usuario escribe (event del naveagador), recibe datos de /search.html
+    const texto = event.target.value; // guardamos el texto (value) que el usuario ha escrito en el campo (event.target)
+    this.busqueda.emit(texto); // .emit envía el texto guardado en la variable 'busqueda'
+  }
 
 }

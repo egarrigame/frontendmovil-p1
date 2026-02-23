@@ -6,10 +6,12 @@ import { CommonModule } from '@angular/common'; // Para que el componente pueda 
 import { Player } from '../../models/player'; // Modelo de los datos de players
 import { PLAYERS } from '../../datos/players-data'; // Datos de los players
 import { Detail } from '../detail/detail'; // Componente detail para mostrarlo de cada player
+import { Search } from '../search/search'; // Componente del filtro
+import { FilterPipe } from '../../pipes/filter-pipe'; // Pipe de filtrado
 
 @Component({
   selector: 'app-players',
-  imports: [CommonModule, Detail], // 
+  imports: [CommonModule, Detail, Search, FilterPipe], // 
   templateUrl: './players.html',
   styleUrl: './players.css',
 })
@@ -17,6 +19,9 @@ export class Players {
   listaPlayers: Player[] = PLAYERS; // Variable con los players definidos en datos, para que el html pueda leer a los jugadores que contiene.
 
   playerSeleccionado?: Player; // Variable para guardar player seleccionado con el click
+
+  textoFiltro: string = ''; // variable para guardar lo que el usuario escribe, viene de players.html que anteriormente lo ha recibido del output de search.ts
+
   verDetail(player: Player) {  // Función para mostrar el detail del player guardado en la variable anterior
     if (this.playerSeleccionado === player) { // Si al hacer click el player es el mismo que está seleccionado, se anula la selección (se pone undefined) y como el player no está en la variable no se muestra el detail
       this.playerSeleccionado = undefined;

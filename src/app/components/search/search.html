@@ -1,1 +1,7 @@
-<p>search works!</p>
+<div class="mb-4">
+  <input type="text" 
+         class="form-control form-control-lg border-primary" 
+         placeholder="Busca por nombre, apellido o posición" 
+         (input)="textoBusqueda($event)"> <!-- llamada a la función de /search.ts, $event es una variable de Angular que envía la información de los cambios en el navegador -->
+         <!-- Funciona: cuando haya un cambio (input), llama y ejecuta la función (textoBusqueda) y pásale los datos ($event) -->
+</div>
