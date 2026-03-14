@@ -1,1 +1,39 @@
-<p>players works!</p>
+<div class="container mt-4">
+  <!-- Filtros -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Buscar por nombre..."
+        [(ngModel)]="filtroNombre">
+    </div>
+    <div class="col-md-6">
+      <select class="form-select" [(ngModel)]="filtroPosicion">
+        <option value="">Todas las posiciones</option>
+        <option *ngFor="let pos of posicionesUnicas" [value]="pos">
+          {{pos}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Listado de jugadores -->
+  <div class="row">
+    <div *ngFor="let jugador of jugadores | filterPlayers:filtroNombre:filtroPosicion" 
+         class="col-md-4 mb-3">
+      <div class="card h-100" (click)="seleccionarJugador(jugador)">
+        <div class="card-body">
+          <h5 class="card-title">{{jugador.nombre}} {{jugador.apellidos}}</h5>
+          <p class="card-text">
+            <span class="badge bg-primary">{{jugador.posicion}}</span>
+            <span class="badge bg-secondary ms-2">#{{jugador.numero}}</span>
+          </p>
+          <p class="card-text">
+            <small>Edad: {{jugador.edad}} años | Altura: {{jugador.altura}}cm</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

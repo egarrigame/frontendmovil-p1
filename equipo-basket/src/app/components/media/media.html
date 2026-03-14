@@ -1,0 +1,26 @@
+<div class="card mt-3" *ngIf="jugador">
+  <div class="card-header bg-dark text-white">
+    <h4>Video de {{jugador.nombre}} {{jugador.apellidos}}</h4>
+  </div>
+  <div class="card-body">
+    <video #videoPlayer 
+           class="w-100" 
+           [src]="jugador.videoUrl" 
+           (ended)="isPlaying = false"
+           controls>
+      Tu navegador no soporta el elemento de video.
+    </video>
+    
+    <div class="controls mt-3">
+      <button class="btn btn-primary me-2" (click)="togglePlay()">
+        {{isPlaying ? 'Pausar' : 'Reproducir'}}
+      </button>
+      <button class="btn btn-secondary me-2" (click)="restartVideo()">Reiniciar</button>
+      <div class="d-inline-block">
+        <label class="me-2">Volumen:</label>
+        <input type="range" min="0" max="1" step="0.1" 
+               [value]="volume" (input)="changeVolume($event)">
+      </div>
+    </div>
+  </div>
+</div>

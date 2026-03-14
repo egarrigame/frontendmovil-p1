@@ -1,0 +1,31 @@
+<div class="card" *ngIf="jugador">
+  <div class="card-header bg-dark text-white">
+    <h3>Detalle del Jugador</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        
+        <img [src]="jugador.imagen" 
+     class="img-fluid rounded" 
+     [alt]="jugador.nombre"
+     style="max-height: 200px; width: 100%; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h2>{{jugador.nombre}} {{jugador.apellidos}}</h2>
+        <table class="table table-striped">
+          <tr><th>Posición:</th><td>{{jugador.posicion}}</td></tr>
+          <tr><th>Número:</th><td>{{jugador.numero}}</td></tr>
+          <tr><th>Edad:</th><td>{{jugador.edad}} años</td></tr>
+          <tr><th>Altura:</th><td>{{jugador.altura}} cm</td></tr>
+          <tr><th>Puntos:</th><td>{{jugador.puntosPorPartido}} pp</td></tr>
+          <tr><th>Nacionalidad:</th><td>{{jugador.nacionalidad}}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-info" *ngIf="!jugador">
+  Selecciona un jugador para ver sus detalles
+</div>

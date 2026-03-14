@@ -1,11 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PlayersComponent } from './components/players/players';
+import { DetailComponent } from './components/detail/detail';
+import { MediaComponent } from './components/media/media';
+import { Jugador } from './models/jugador.model';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,  // ← IMPORTANTE: AÑADE ESTO
+  imports: [         // ← IMPORTANTE: AÑADE ESTO
+    CommonModule,    // Para *ngIf, *ngFor
+    PlayersComponent,
+    DetailComponent,
+    MediaComponent
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('equipo-basket');
+export class AppComponent {
+  title = 'equipo-basket';
+  jugadorSeleccionado: Jugador | null = null;
+
+  onJugadorSeleccionado(jugador: Jugador): void {
+    this.jugadorSeleccionado = jugador;
+  }
 }
