@@ -5,10 +5,10 @@
   <div class="card-body">
     <video #videoPlayer 
            class="w-100" 
-           [src]="jugador.videoUrl" 
+           [src]="getSafeUrl(jugador.videoUrl)"
            (ended)="isPlaying = false"
            controls>
-      Tu navegador no soporta el elemento de video.
+    
     </video>
     
     <div class="controls mt-3">

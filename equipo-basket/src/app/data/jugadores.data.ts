@@ -11,7 +11,7 @@ export const JUGADORES: Jugador[] = [
     numero: 7,
     puntosPorPartido: 18.6,
     imagen:'img/kukoc.jpg',      
-    videoUrl:  'assets/videos/basket.mp4',
+    videoUrl:  'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
   {
@@ -24,7 +24,7 @@ export const JUGADORES: Jugador[] = [
     numero: 10,
     puntosPorPartido: 22.4,
     imagen:  'img/petrovic.webp',
-    videoUrl: 'assets/videos/basket.mp4',
+    videoUrl: 'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
   {
@@ -37,7 +37,7 @@ export const JUGADORES: Jugador[] = [
     numero: 12,
     puntosPorPartido: 16.7,
     imagen: 'img/radja.jpeg',
-    videoUrl: 'assets/videos/video.mp4',
+    videoUrl:'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
   {
@@ -50,7 +50,7 @@ export const JUGADORES: Jugador[] = [
     numero: 11,
     puntosPorPartido: 16.0,
     imagen: 'img/Arvydas_Sabonis.jpg',
-    videoUrl:   'assets/videos/basket.mp4',
+    videoUrl:   'assets/videos/video.mp4.mp4',
     nacionalidad: 'Lituania'
   },
   {
@@ -63,7 +63,7 @@ export const JUGADORES: Jugador[] = [
     numero: 13,
     puntosPorPartido: 18.5,
     imagen: 'img/marciulionis.jpeg',
-    videoUrl: 'assets/videos/basket.mp4',
+    videoUrl: 'assets/videos/video.mp4.mp4',
     nacionalidad: 'Lituania'
   }
 ];
