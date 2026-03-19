@@ -10,7 +10,7 @@ export const JUGADORES: Jugador[] = [
     altura: 208,
     numero: 7,
     puntosPorPartido: 18.6,
-    imagen:'img/kukoc.jpg',      
+    imagen: 'assets/img/kukoc.jpg',      
     videoUrl:  'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
@@ -23,7 +23,7 @@ export const JUGADORES: Jugador[] = [
     altura: 196,
     numero: 10,
     puntosPorPartido: 22.4,
-    imagen:  'img/petrovic.webp',
+    imagen:  'assets/img/petrovic.webp',
     videoUrl: 'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
@@ -36,7 +36,7 @@ export const JUGADORES: Jugador[] = [
     altura: 211,
     numero: 12,
     puntosPorPartido: 16.7,
-    imagen: 'img/radja.jpeg',
+    imagen: 'assets/img/radja.jpeg',
     videoUrl:'assets/videos/video.mp4.mp4',
     nacionalidad: 'Croacia'
   },
@@ -49,7 +49,7 @@ export const JUGADORES: Jugador[] = [
     altura: 221,
     numero: 11,
     puntosPorPartido: 16.0,
-    imagen: 'img/Arvydas_Sabonis.jpg',
+    imagen: 'assets/img/Arvydas_Sabonis.jpg',
     videoUrl:   'assets/videos/video.mp4.mp4',
     nacionalidad: 'Lituania'
   },
@@ -62,7 +62,7 @@ export const JUGADORES: Jugador[] = [
     altura: 196,
     numero: 13,
     puntosPorPartido: 18.5,
-    imagen: 'img/marciulionis.jpeg',
+    imagen: 'assets/img/marciulionis.jpeg',
     videoUrl: 'assets/videos/video.mp4.mp4',
     nacionalidad: 'Lituania'
   }
